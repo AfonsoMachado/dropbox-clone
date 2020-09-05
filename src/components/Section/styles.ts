@@ -84,6 +84,24 @@ export const Header = styled.header`
       font-size: 29px;
     }
   }
+
+  > button {
+    color: var(--text-color);
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const DropboxLogo = styled(FaDropbox)`
