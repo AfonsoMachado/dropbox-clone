@@ -1,8 +1,13 @@
 import React from 'react';
+import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
   return (
-    <h1>Dropbox Clone</h1>
+    <>
+      <h1>Dropbox Home Clone</h1>
+
+      <GlobalStyles />
+    </>
   );
 }
 
