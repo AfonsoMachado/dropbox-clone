@@ -60,6 +60,11 @@ export const HeaderWrapper = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+
+  /* faz com que todos os header não saiam de seus respectivos pais.
+  * fazendo com que mantenha a cor de cada content, como no site original
+  */
+  clip: rect(auto, auto, auto, auto);
 `;
 
 export const Header = styled.header`

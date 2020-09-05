@@ -9,6 +9,8 @@ interface Props {
 }
 
 const Section: React.FC<Props> = ({ variant, title, description }) => {
+  const buttonVariant = Math.round(Math.random()) // retornando zero ou 1
+
   return (
     <Container className={variant} >
       <HeaderWrapper>
@@ -17,8 +19,8 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
             <DropboxLogo />
             <span>Dropbox</span>
           </h1>
-
-          <button>Interagir</button>
+          {/* Criando efeito de mudança no nome do header */}
+          <button>{buttonVariant === 0 ? 'Acessar' : 'Interagir'}</button>
         </Header>
 
       </HeaderWrapper>
