@@ -8,6 +8,7 @@ import data from './data'
 function App() {
   return (
     <>
+      {/* Configurando multiplos conteudos */}
       <Section
         variant="blue"
         title={data[0].title}

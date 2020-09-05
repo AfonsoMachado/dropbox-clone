@@ -47,11 +47,45 @@ export const Container = styled.div`
   }
 
   background: var(--bg-color);
+  position: relative;
 
 `;
 
-export const HeaderWrapper = styled.div``;
-export const Header = styled.div``;
+export const HeaderWrapper = styled.div`
+  /* position absolute relativo ao pai, que está com position relative */
+  position: absolute;
+
+  /* Consumindo o elemento inteiro de content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`;
+
+export const Header = styled.header`
+  /* sobrepondo tudo */
+  z-index: 3;
+  background: var(--bg-color);
+
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 32px;
+
+  > h1 {
+    display: flex;
+    align-items: center;
+
+    > span {
+      color: var(--text-color);
+      margin-left: 10px;
+      font-size: 29px;
+    }
+  }
+`;
+
 export const DropboxLogo = styled(FaDropbox)`
   width: 36px;
   height: 32px;
