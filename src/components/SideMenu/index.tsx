@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Container } from './styles';
 
+// limite de scroll para ocultar o menu lateral
 const scrollThreshold = 300;
 
 const SideMenu: React.FC = ({ children }) => {
