@@ -75,4 +75,36 @@ export const Form = styled.form`
     font-size: 12px;
     margin-top: 3px;
   }
+
+  > input {
+    background: var(--color-tertiary);
+    border: 1px solid var(--color-border);
+
+    padding: 13px 18px;
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  > button {
+    margin-top: 18px;
+
+    padding: 13px 18px;
+    font-size: 16px;
+    background-color: var(--color-blue);
+
+    color: var(--color-tertiary);
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.87;
+    }
+  }
+
+  > .terms {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 4px;
+  }
 `;
