@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // icone do dropbox do react icons
-import { FaDropbox } from 'react-icons/fa'
+import { FaDropbox } from 'react-icons/fa';
 
 export const Container = styled.div`
   --padding-top: 100px;
@@ -34,21 +34,19 @@ export const Container = styled.div`
   }
 
   /* dados para a primeira seção */
-  &:first-child{
+  &:first-child {
     --padding-top: 130px;
     --heading-font-size: 51px;
 
     /* somente para computador */
-    @media(min-width: 1024px) {
+    @media (min-width: 1024px) {
       --content-width: 50%;
       --heading-font-size: 71px;
     }
-
   }
 
   background: var(--bg-color);
   position: relative;
-
 `;
 
 export const HeaderWrapper = styled.div`
@@ -98,7 +96,8 @@ export const Header = styled.header`
     font-size: 16px;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }

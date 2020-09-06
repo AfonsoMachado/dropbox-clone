@@ -1,18 +1,29 @@
 import React from 'react';
 
-import { Container, HeaderWrapper, Header, DropboxLogo, Content } from './styles';
+import {
+  Container,
+  HeaderWrapper,
+  Header,
+  DropboxLogo,
+  Content,
+} from './styles';
 
 interface Props {
-  variant: 'blue' | 'beige' | 'white' | 'black'
-  title: string
-  description: string
+  variant: 'blue' | 'beige' | 'white' | 'black';
+  title: string;
+  description: string;
 }
 
 const Section: React.FC<Props> = ({ variant, title, description }) => {
-  const buttonVariant = Math.round(Math.random()) // retornando zero ou 1
+  const buttonVariant = Math.round(Math.random()); // retornando zero ou 1
+
+  // disparado quando é clicado no x
+  function handleToggle() {
+    if (window.toggleActiveMenu) window.toggleActiveMenu();
+  }
 
   return (
-    <Container className={variant} >
+    <Container className={variant}>
       <HeaderWrapper>
         <Header>
           <h1>
@@ -20,9 +31,10 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
             <span>Dropbox</span>
           </h1>
           {/* Criando efeito de mudança no nome do header */}
-          <button>{buttonVariant === 0 ? 'Acessar' : 'Interagir'}</button>
+          <button onClick={handleToggle}>
+            {buttonVariant === 0 ? 'Acessar' : 'Interagir'}
+          </button>
         </Header>
-
       </HeaderWrapper>
 
       <Content>
@@ -30,7 +42,7 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
         <p>{description}</p>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
 export default Section;

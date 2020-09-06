@@ -17,20 +17,20 @@ export const Container = styled.div`
   /* para telas de computador, o menu ocupa apenas lateralmente  */
   @media (min-width: 1024px) {
     width: calc(100% / 3);
-    box-shadow: -7px 0 5px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: -7px 0 5px -6px rgba(0, 0, 0, 0.075);
   }
 
   @media (min-width: 1440px) {
     width: calc(480px + ((100vw - 1440px) / 2));
   }
 
-  /* por padrão a barra lateral fica 100% para direita */
-  transform: translateX(100%);
-
   /* função de animação de exibição da barra lateral */
   transition: 0.5s transform cubic-bezier(0.5, 0, 0, 1);
 
-  &.scrollOpen {
+  /* por padrão a barra lateral fica 100% para direita */
+  transform: translateX(100%);
+
+  &.open {
     transform: translateX(0);
   }
 

@@ -43,6 +43,8 @@ export const Navigation = styled.nav`
 
   @media (min-width: 1024px) {
     /* a partir desse tamanho de tela, o nome dropbox não é mais exibido */
+    justify-content: flex-end;
+
     > h1 {
       display: none;
     }
