@@ -27,10 +27,22 @@ export const Container = styled.div`
   /* por padrão a barra lateral fica 100% para direita */
   transform: translateX(100%);
 
+  /* função de animação de exibição da barra lateral */
+  transition: 0.5s transform cubic-bezier(0.5, 0, 0, 1);
+
+  &.scrollOpen {
+    transform: translateX(0);
+  }
+
   @media (min-width: 1024px) {
     &.scrollOpen {
       /* quando é usado o scroll para mais de 300px, a barra lateral aparece */
       transform: translateX(0);
+    }
+
+    /* ocultando o icone de X para fechar a barra lateral para casos onde a barra é aberta clicando no menu para abri-la*/
+    &.scrollOpen .action--close {
+      display: none;
     }
   }
 `;

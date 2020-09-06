@@ -8,7 +8,7 @@ const scrollThreshold = 300;
 const SideMenu: React.FC = ({ children }) => {
   const [scrollY, setScrollY] = useState(0);
   // para exibir o menu lateral no clique
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     function onScroll() {
